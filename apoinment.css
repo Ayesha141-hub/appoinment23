@@ -1,0 +1,654 @@
+/*======================Universal======================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*======================Universal Fonts and Colors======================*/
+:root {
+    --heading-font: 'Playfair Display', serif;
+    --text-font: 'Lora', serif;
+}
+
+:root {
+    --background-color: #e5f8e5;
+    --primary-color: #A8D5BA;
+    --accent-color: #A7C7E7;
+    --heading-color: #2C6E49;
+    --text-color: #4A4A4A;
+    --button-color: #6CA6C1;
+    --button-hover: #4F91B8;
+    --border-color: #DCEAE3;
+    --text-white: #ffff;
+}
+
+/*======================Global Header======================*/
+
+header {
+    position: relative;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: #a7dbe9;
+    /* background-color: rgb(110, 211, 252); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+#brand_name {
+    color: #0a67ef;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.head-logo {
+    height: 90px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.head-logo img {
+    height: 100px;
+}
+
+.head-search {
+    height: 40px;
+    width: 25%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.inp-search {
+    width: 85%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.s-icon {
+    width: 15%;
+}
+
+.s-icon .search-btn {
+    height: 36px;
+    width: 36px;
+    background-color: #2375f1;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: large;
+    border: none;
+    border-radius: 50%;
+    color: var(--text-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.s-icon .search-btn:hover {
+    background-color: #46fc4f;
+}
+
+/*======================Global Nav-bar======================*/
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    background-color: #e0dfdf;
+    /* background-color: rgb(168, 247, 168); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    top: 60px;
+}
+
+
+.nav-bar .navlink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-linkss {
+    display: flex;
+}
+
+.nav-linkss li {
+    list-style: none;
+    position: relative;
+    padding: 15px 20px;
+}
+
+.nav-linkss li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: larger;
+    font-family: var(--text-font);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-linkss li .active {
+    color: #3589b9;
+    /* color: #03751f; */
+}
+
+
+/*======================Underline Hover effect on Nav links======================*/
+
+.nav-linkss li a:hover {
+    color: #3589b9;
+    /* color:  #03751f; */
+}
+
+.nav-linkss>li>a.hov {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-linkss>li>a.hov::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #5494b9;
+    /* background:   #03751f; */
+    transition: all 0.5s ease;
+}
+
+.nav-linkss>li>a.hov:hover::after {
+    width: 100%;
+}
+
+/*======================Dropdown on hover======================*/
+.dropdown-menu1 {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color:  rgb(168, 247, 168); */
+    background-color: #e0dfdf;
+    list-style: none;
+    padding: 10px 20px;
+    min-width: 150px;
+    opacity: 0;
+    transform: translateY(10px);
+    border-radius: 5px;
+    transition: opacity .5s ease, transform .5s ease, visibility .5s ease;
+}
+
+.dropdown-menu1 li {
+    padding: 7px 10px;
+}
+
+.dropdown-menu1 li a {
+    color: var(--text-color);
+    display: block;
+    text-decoration: none !important;
+}
+
+.dropdown1:hover .dropdown-menu1 {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a::after {
+    display: none !important;
+}
+
+/*======================Appoinment button======================*/
+.apt-btn button {
+    height: 40px;
+    width: 150px;
+    background-color: #1974eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.7s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 100px;
+}
+
+.apt-btn button:hover {
+    background-color: #12b312;
+    opacity: 0.7;
+}
+
+.apt-btn button a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: larger;
+}
+
+
+
+/*======================Nav-bar completed======================*/
+/*======================Appoinment page introduction======================*/
+.appt-intro {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    /* background-color: #f4f4f9; */
+    background: linear-gradient(90deg, #a1defa, #9eecc0);
+    padding: 40px 20px;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.appt-intro p {
+    font-family: var(--text-font);
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #5797f7, #5add93);
+    border-radius: 2px;
+}
+
+.appt-intro p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*======================Appoinment page introduction complete======================*/
+/*======================Appoinment page Form======================*/
+.form {
+    position: relative;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    padding: 20px 100px;
+    border-radius: 15px;
+    border: 2px solid #dceae3;
+    width: 900px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(233, 247, 253);
+    border: 2px solid skyblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #858282;
+    /* border: none; */
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-button {
+    padding: 12px 50px;
+    font-size: 18px;
+    background-color: #6ca6c1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #4f91b8;
+}
+
+.contact-container {
+    position: relative;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.contact {
+    width: 900px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(233, 247, 253);
+    border: 2px solid skyblue;
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.contact p {
+    color: #4a4a4a;
+    font-family: var(--text-font);
+    font-size: 18px;
+}
+
+.faq-section {
+    position: relative;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.accordion-button {
+    background-color: #8dc0ec !important;
+    color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #6aa5d8 !important;
+    color: white !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.cta-section {
+    position: relative;
+    top: 130px;
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #e5f8ef;
+}
+
+.cta-section p {
+    font-size: 20px;
+    color: #4a4a4a;
+    font-family: var(--text-font);
+}
+
+.cta-button,
+.call-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: var(--button-color);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.call-button {
+    margin-left: 10px;
+}
+
+.cta-button:hover,
+.call-button:hover {
+    background: var(--button-hover);
+}
+
+/* .call-button:hover {
+    background: #0056b3;
+} */
+
+/*======================Global Footer start======================*/
+.footer-container {
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    display: flex;
+    margin-top: 180px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lora';
+    color: #4A4A4A;
+}
+
+.foot {
+    min-height: 50vh;
+    height: auto;
+    color: #4A4A4A;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 50px 40px 10px 40px;
+}
+
+.footer-logo,
+.useful-links,
+.contact-details,
+.connected {
+    width: 25%;
+    padding-right: 30px;
+}
+
+.footer-logo img {
+    height: 100px;
+}
+
+.footer-logo p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.connected p {
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+.contact-details h2,
+.useful-links h2,
+.connected h2 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-weight: bold;
+    border-bottom: 2px solid grey;
+}
+
+.contact-details .con-p {
+    padding-top: 10px;
+}
+
+.contact-details {
+    gap: 20px;
+}
+
+.social-link ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.social-link ul li a {
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 30px;
+    transition: all .5s ease;
+}
+
+.social-link ul li a:hover {
+    color: #6077df;
+}
+
+.useful-links ul li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.useful-links ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.useful-links ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.foot-input {
+    display: flex;
+    align-items: center;
+    /* justify-content: start; */
+    gap: 10px;
+    flex-direction: column;
+}
+
+.f-email {
+    height: 40px;
+    width: 270px;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    outline: none;
+    margin-right: 19px;
+}
+
+.f-submit {
+    height: 40px;
+    width: 120px;
+    background-color: rgb(37, 117, 5);
+    color: white;
+    border: none;
+    margin-right: 167px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+
+.f-submit:hover {
+    background-color: #0ec20e !important;
+}
+
+.f-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.foot-btn {
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 7px;
+    margin-right: 160px;
+    transition: all .3s ease;
+}
+
+.foot-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.foot-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+}
+
+.footer-botm {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid grey;
+    padding: 20px 0px 25px 0px;
+}
+
+/*======================Global Footer end======================*/
+
+
+/*======================Global Footer end======================*/
+
+/* ✅ Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-linkss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .foot {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo, .useful-links, .contact-details, .connected {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .head-logo img {
+        height: 80px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
